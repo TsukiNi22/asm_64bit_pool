@@ -20,6 +20,10 @@ my_print_alpha:
     mov rsi, letter ; buffer
     syscall
 
+    ; Check the execution
+    cmp rax, 1
+    jne .error
+
     ; Update the letter
     inc byte [letter]
 
@@ -32,4 +36,10 @@ my_print_alpha:
     pop rbp    
 
     ; Return
+    mov rax, 0
+    ret
+
+.error:
+    ; Return
+    mov rax, 1
     ret

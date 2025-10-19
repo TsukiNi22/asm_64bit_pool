@@ -19,6 +19,10 @@ my_print_revalpha:
 .loop:
     mov rsi, letter
     syscall
+    
+    ; Check the execution
+    cmp rax, 1
+    jne .error
 
     ; Update the letter
     dec byte [letter]
@@ -32,4 +36,10 @@ my_print_revalpha:
     pop rbp
     
     ; Return
+    mov rax, 0
+    ret
+
+.error:
+    ; Return
+    mov rax, 1
     ret

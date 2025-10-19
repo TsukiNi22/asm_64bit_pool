@@ -19,6 +19,10 @@ my_print_digits:
 .loop:
     mov rsi, digit ; buffer
     syscall
+    
+    ; Check the execution
+    cmp rax, 1
+    jne .error
 
     ; Update the letter
     inc byte [digit]
@@ -32,4 +36,10 @@ my_print_digits:
     pop rbp    
 
     ; Return
+    mov rax, 0
+    ret
+
+.error:
+    ; Return
+    mov rax, 1
     ret
