@@ -1,4 +1,4 @@
-extern int my_print_alpha(void);
+int my_print_alpha(void);
 
 int main(int argc, const char *argv[])
 {
