@@ -4,19 +4,20 @@ section .data
 section .text
     global my_print_alpha
 
-; Display the alphabet from 'a' to 'b'
+; Display the alphabet from 'a' to 'z'
 my_print_alpha:
 
     ; Setup the stack
     push rbp
     mov rbp, rsp
 
-.loop:
-    ; Write the letter start from 'a'
+    ; Write the letter
     mov rax, 1  ; syscall nb
     mov rdi, 1  ; fd
-    mov rsi, letter ; buffer
     mov rdx, 1  ; nb
+
+.loop:
+    mov rsi, letter ; buffer
     syscall
 
     ; Update the letter

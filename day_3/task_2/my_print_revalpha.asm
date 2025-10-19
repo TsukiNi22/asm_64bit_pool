@@ -11,13 +11,13 @@ my_print_revalpha:
     push rbp
     mov rbp, rsp
     
-.loop:
-
     ; Write the letter
     mov rax, 1
     mov rdi, 1
-    mov rsi, letter
     mov rdx, 1
+
+.loop:
+    mov rsi, letter
     syscall
 
     ; Update the letter
