@@ -13,9 +13,3 @@ my_swap:
     pop rbp
     mov rax, 0
     ret
-
-.error:
-    mov rsp, rbp
-    pop rbp
-    mov rax, 0
-    ret
