@@ -25,11 +25,13 @@ my_putstr:
     mov rbp, rsp
     
     mov r10, rdi
-    mov rbx, 0
 
+    mov rbx, -1
     cmp r10, 0
     je .return
 
+    mov rbx, 0
+    
 .loop:
     mov sil, byte [r10 + rbx]
     call print_char
