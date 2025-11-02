@@ -23,12 +23,9 @@ my_strncpy:
         jge .return
 
         inc r10
-    
         jmp .loop
 
 .return:
-    mov byte [r14 + r10], 0
-
     mov rax, r14
     ret
 
