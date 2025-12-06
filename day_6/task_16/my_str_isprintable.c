@@ -6,7 +6,7 @@ int main(int argc, const char *argv[])
 {
     char str0[] = "This is a test!";
     char str1[] = "This is a TEST!";
-    char str2[] = "IS";
+    char str2[] = "IS\a";
     char str3[] = "IS?";
  
     printf("%d\n", my_str_isprintable((void *) 0));
