@@ -6,8 +6,8 @@ false   equ 0
 true    equ 1
 
 ; ascii const definition
-char_limit_low  equ 0
-char_limit_up   equ 127
+char_limit_low  equ 31  ; SPACE
+char_limit_up   equ 126 ; ~
 
 section .text
     global my_str_isprintable
