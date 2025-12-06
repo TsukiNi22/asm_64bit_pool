@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 char *my_strupcase(char *str);
 
 int main(int argc, const char *argv[])
@@ -10,9 +9,9 @@ int main(int argc, const char *argv[])
     char str3[] = "is?";
  
     printf("%p\n", my_strupcase((void *) 0));
-    printf("%s\n", my_strupcase(strdup(str0)));
-    printf("%s\n", my_strupcase(strdup(str1)));
-    printf("%s\n", my_strupcase(strdup(str2)));
-    printf("%s\n", my_strupcase(strdup(str3)));
+    printf("%s\n", my_strupcase(str0));
+    printf("%s\n", my_strupcase(str1));
+    printf("%s\n", my_strupcase(str2));
+    printf("%s\n", my_strupcase(str3));
     return 0;
 }
